@@ -12,5 +12,5 @@ class LibraryMember(Document):
 
 	def autoname(self):
 		# select a project name based on customer
-		format = "LM-{}-.####".format(self.first_name)
+		format = "{}".format(self.first_name)
 		self.name = make_autoname(format)

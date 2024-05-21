@@ -58,7 +58,7 @@ function remove_field_name(frm){
 }
 
 function add_create_fine_button(frm) {
-  if(frm.doc.has_fine){
+  if(frm.doc.has_fine && (frm.doc.type =="Return")){
      frm.add_custom_button('Create Fine', () => {
         frappe.new_doc('Library Fine', {
             library_transaction: frm.doc.name
