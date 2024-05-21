@@ -1,0 +1,21 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Chart 1",
+   "width": "Half"
+  }
+ ],
+ "creation": "2024-05-15 15:35:54.882472",
+ "dashboard_name": "Library",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2024-05-15 15:46:20.951864",
+ "modified_by": "Administrator",
+ "module": "library management",
+ "name": "Library",
+ "owner": "Administrator"
+}
