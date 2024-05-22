@@ -19,7 +19,24 @@ class LibraryMembership(Document):
             frappe.throw("There is an active membership for this member")
 
 
-        # get loan period and compute to_date by adding loan_period to from_date
+    def validate_member(self):
+        return frappe.db.exists(
+	          "Library Membership",
+	            {
+	                "library_member": self.library_member,
+	                "docstatus": 1,
+	            })
+    def before_save(self):
+        if self.validate_member() :
+            member = frappe.get_doc("Library Member",self.library_member)
+            member.status = "Active"
+            member.save()
+        else :
+            member = frappe.get_doc("Library Member",self.library_member)
+            member.status = "Deactive"
+            member.save()
+
+
 
 
 
